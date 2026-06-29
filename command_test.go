@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	command "github.com/gloo-foo/cmd-grep"
-
 	"github.com/gloo-foo/testable"
+
+	command "github.com/gloo-foo/cmd-grep"
 )
 
 func TestGrep_BasicMatch(t *testing.T) {
@@ -26,7 +26,10 @@ func TestGrep_BasicMatch(t *testing.T) {
 }
 
 func TestGrep_IgnoreCase(t *testing.T) {
-	lines, err := testable.TestLines(command.Grep("HELLO", command.GrepIgnoreCase), "Hello world\ngoodbye world\nhELLo again\n")
+	lines, err := testable.TestLines(
+		command.Grep("HELLO", command.GrepIgnoreCase),
+		"Hello world\ngoodbye world\nhELLo again\n",
+	)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -110,7 +113,10 @@ func TestGrep_WholeLine(t *testing.T) {
 }
 
 func TestGrep_WholeLine_IgnoreCase(t *testing.T) {
-	lines, err := testable.TestLines(command.Grep("HELLO", command.GrepWholeLine, command.GrepIgnoreCase), "Hello\nhello world\n")
+	lines, err := testable.TestLines(
+		command.Grep("HELLO", command.GrepWholeLine, command.GrepIgnoreCase),
+		"Hello\nhello world\n",
+	)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -248,7 +254,10 @@ func TestGrep_Count_EmptyInput(t *testing.T) {
 func TestGrep_Extended_WholeLine(t *testing.T) {
 	// -E -x: the regex is anchored to the whole line, so "ab" matches the line
 	// "ab" but not "abc" — the alternation only matches a complete line.
-	lines, err := testable.TestLines(command.Grep("ab|cd", command.GrepExtended, command.GrepWholeLine), "ab\nabc\ncd\nxcdx\n")
+	lines, err := testable.TestLines(
+		command.Grep("ab|cd", command.GrepExtended, command.GrepWholeLine),
+		"ab\nabc\ncd\nxcdx\n",
+	)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}

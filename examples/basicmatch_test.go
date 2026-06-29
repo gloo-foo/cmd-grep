@@ -3,9 +3,9 @@ package grep_test
 import (
 	"fmt"
 
-	command "github.com/gloo-foo/cmd-grep"
-
 	"github.com/gloo-foo/testable"
+
+	command "github.com/gloo-foo/cmd-grep"
 )
 
 func ExampleGrep_basicMatch() {
