@@ -1,0 +1,6 @@
+file.txt
+test[123].log
+data.csv
+backup[2024].tar.gz
+report.pdf
+
