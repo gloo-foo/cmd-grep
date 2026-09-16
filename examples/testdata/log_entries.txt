@@ -1,0 +1,7 @@
+2024-01-15 10:23:45 INFO Server started
+2024-01-15 10:24:12 ERROR Connection failed
+2024-01-15 10:24:30 INFO Request processed
+2024-01-15 10:25:01 WARN Low memory
+2024-01-15 10:25:45 ERROR Database timeout
+2024-01-15 10:26:00 INFO Cache cleared
+

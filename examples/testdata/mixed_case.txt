@@ -1,0 +1,6 @@
+Error: failed to connect
+WARNING: check logs
+error: retry attempt
+Info: process started
+ERROR: timeout occurred
+

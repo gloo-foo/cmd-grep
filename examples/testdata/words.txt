@@ -1,0 +1,6 @@
+cat
+catch
+catapult
+category
+dog
+
